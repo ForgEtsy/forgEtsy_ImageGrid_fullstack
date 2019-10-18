@@ -15,12 +15,8 @@ const ImageGrid: React.FC<PropTypes> = ({
 }: PropTypes) => {
   return (
     <div className={style.relatedItems}>
-      {products.map((product, idx) => {
+      {products.map((product) => {
         const title = unescape(product.title);
-        const limit = 5;
-        if (idx >= limit) {
-          return null;
-        }
         return (
           <ImageCard
             key={product.listing_id}

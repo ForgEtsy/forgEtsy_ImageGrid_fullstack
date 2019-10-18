@@ -18,6 +18,7 @@ const ShopDetails: React.FC<PropTypes> = ({ shopInfo }: PropTypes) => {
     ? shopInfo.custom_shops_state
     : threeStars;
   const yearReference = 10;
+
   faker.seed(shopInfo.shop_id);
   const numberOfReviews = faker.random.number({
     min: lowReviews,

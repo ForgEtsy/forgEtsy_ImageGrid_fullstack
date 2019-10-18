@@ -78,12 +78,12 @@ class BelowMainContent extends React.Component<PropTypes, State> {
       });
 
       const selectedProductsIndex = 0;
-      const relatedProductsIndex = 1;
-      const shopProductsIndex = 2;
-
+      const shopProductsIndex = 1;
+      const relatedProductsIndex = 2;
       const selectedProduct: ApiResults = results.data[selectedProductsIndex];
       const relatedProducts: ApiResults[] = results.data[relatedProductsIndex];
       const addlShopProducts: ApiResults[] = results.data[shopProductsIndex];
+
       this.setState({ selectedProduct, relatedProducts, addlShopProducts });
     } catch (error) {
       if (axios.isCancel(error)) {
