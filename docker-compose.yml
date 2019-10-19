@@ -1,15 +1,25 @@
 version: "3"
 services:
-  web:
-    container_name: server_web
-    restart: always
+  fullstack:
     build: .
+    image: fullstack
+    restart: always
     ports:
-    - "80:3001"
+      - "80:3001"
+    volumes:
+      - /node_modules
+      - /build
     links:
-    - mongo
-  mongo:
+      - mongodb
+    networks:
+      - fullstacknetwork
+  mongodb:
     container_name: mongo
     image: mongo:latest
     ports:
-    - "27017:27017"
+      - "27017:27017"
+    networks:
+      - fullstacknetwork
+networks:
+  fullstacknetwork:
+    driver: bridge

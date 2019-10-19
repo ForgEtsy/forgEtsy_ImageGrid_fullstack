@@ -70,33 +70,37 @@ const productsSave = products => {
 };
 
 const findCombinedProductsforID = async id => {
-  const product = await findProduct(id);
-  category = product.category_path;
-  const relatedProducts = await findRelatedProducts(category);
-  const addlShopProducts = await findShopProducts();
-  return [product, addlShopProducts, relatedProducts];
+  try {
+    const product = await findProduct(id);
+    const category = product.category_path;
+    const relatedProducts = await findRelatedProducts(category);
+    const addlShopProducts = await findShopProducts();
+    return [product, addlShopProducts, relatedProducts];
+  } catch (error) {
+    return `error of , ${error}`;
+  }
 };
 
 const findProduct = async id => {
   const product = await Products.findOne(id).catch(error => {
-    return "error of ", error;
+    return `error of , ${error}`;
   });
   return product;
 };
 
 const findAllProducts = async () => {
   const products = await Products.find().catch(error => {
-    return "error of ", error;
+    return `error of , ${error}`;
   });
   return products;
 };
 
-const findRelatedProducts = async () => {
+const findRelatedProducts = async category => {
   const returnQty = Math.round(Math.random()) === 0 ? 5 : 10;
   const products = await Products.find({ category_path: category[0] })
     .limit(returnQty)
     .catch(error => {
-      return "error of ", error;
+      return `error of , ${error}`;
     });
   return products;
 };
@@ -106,7 +110,7 @@ const findShopProducts = async () => {
   const products = await Products.aggregate()
     .sample(returnQty)
     .catch(error => {
-      return "error of ", error;
+      return `error of , ${error}`;
     });
   return products;
 };

@@ -1,15 +1,20 @@
-FROM node:10
+FROM node:lts-slim
 
-# Create app directory
-WORKDIR /usr/src/app
+# Create server directory
+WORKDIR /webapp
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
-COPY package*.json ./
+COPY package*.json /webapp/
+
 RUN npm install
 
 # Bundle app source
-COPY . .
+COPY . /webapp/
+
+RUN npm run build
+
+COPY . /webapp/
 
 EXPOSE 3001
 
