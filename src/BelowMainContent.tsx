@@ -2,6 +2,9 @@ import axios from "axios";
 import React from "react";
 import { match } from "react-router-dom";
 import style from "./App.module.css";
+import AboveFooterSection from "./components/Footer/AboveFooterSection";
+import Footer from "./components/Footer/Footer";
+import MoreOptions from "./components/MoreOptions/MoreOptions";
 import RelatedContainer from "./components/RelatedContainer/RelatedContainer";
 import ShopContainer from "./components/ShopContainer/ShopContainer";
 import { APIENDPOINT } from "./Const";
@@ -53,18 +56,23 @@ class BelowMainContent extends React.Component<PropTypes, State> {
       this.state.addlShopProducts
     ) {
       return (
-        <div className="App">
-          <ShopContainer
-            products={this.state.addlShopProducts}
-            shopInfo={this.state.selectedProduct.Shop}
-          />
-          <div className={style.horizontalRule} />
-          <RelatedContainer products={this.state.relatedProducts} />
+        <div className="Main">
+          <div className="ImageGridContainer">
+            <ShopContainer
+              products={this.state.addlShopProducts}
+              shopInfo={this.state.selectedProduct.Shop}
+            />
+            <div className={style.horizontalRule} />
+            <RelatedContainer products={this.state.relatedProducts} />
+            <MoreOptions />
+          </div>
+          <AboveFooterSection />
+          <Footer />
         </div>
       );
     }
     return (
-      <div className="App">
+      <div className="ImageGridContainer">
         <h1 className={style.h1Color}>"loading...</h1>
       </div>
     );

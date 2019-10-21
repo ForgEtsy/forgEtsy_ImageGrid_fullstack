@@ -1,0 +1,35 @@
+.aboveFooterSection {
+  margin-top: 40px;
+  background-color: rgb(47, 70, 108);
+  height: 252px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 30px;
+  color: white;
+}
+
+.shopColumn > div,
+.sellColumn > div,
+.aboutColumn > div,
+.helpColumn > div {
+  padding: 7px 0;
+  cursor: pointer;
+}
+
+.shopColumn > div:hover,
+.sellColumn > div:hover,
+.aboutColumn > div:hover,
+.helpColumn > div:hover {
+  text-decoration: underline;
+}
+
+.helpColumn3 {
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 7px 0px;
+}
+
+.helpColumn4 > i {
+  text-decoration: none;
+  padding: 0 5px 0 5px;
+}

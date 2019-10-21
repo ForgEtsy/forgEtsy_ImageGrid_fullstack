@@ -1,0 +1,109 @@
+.moreOptionsTitle {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: normal;
+  box-sizing: border-box;
+}
+
+.moreOptionsContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.randomProductName {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: bold;
+  color: #222;
+  /* width: max-content; */
+  height: 38px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.additionalInformationContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additionalInformationDate {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: rgb(117, 117, 117);
+}
+
+.fakeLink {
+  text-decoration: underline;
+  color: black;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.fakeReport {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+
+.getFresh {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.fieldDiv {
+  color: #222;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.inputDiv {
+  color: #222;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 30%;
+  margin-left: 30%;
+}
+
+.input {
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top-color: rgba(0, 0, 0, 0.2);
+  color: #222;
+  font-size: 14px;
+  height: 38px;
+  padding: 9px 12px;
+  width: 100%;
+}
+
+.buttonDiv {
+  color: #222;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.inputButton {
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: bold;
+  height: 38px;
+  padding: 8px 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #222222;
+  cursor: pointer;
+}
