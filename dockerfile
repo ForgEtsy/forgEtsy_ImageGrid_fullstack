@@ -3,8 +3,6 @@ FROM node:lts-slim
 # Create server directory
 WORKDIR /webapp
 
-ENV NODE_ENV=production
-
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json /webapp/
