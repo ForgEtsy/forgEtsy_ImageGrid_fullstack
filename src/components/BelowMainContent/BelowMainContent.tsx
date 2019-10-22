@@ -1,14 +1,14 @@
 import axios from "axios";
 import React from "react";
 import { match } from "react-router-dom";
-import style from "./App.module.css";
-import AboveFooterSection from "./components/Footer/AboveFooterSection";
-import Footer from "./components/Footer/Footer";
-import MoreOptions from "./components/MoreOptions/MoreOptions";
-import RelatedContainer from "./components/RelatedContainer/RelatedContainer";
-import ShopContainer from "./components/ShopContainer/ShopContainer";
-import { APIENDPOINT } from "./Const";
-import { ApiResults } from "./interfaces/apiResultTypes";
+import { APIENDPOINT } from "../../Const";
+import { ApiResults } from "../../interfaces/apiResultTypes";
+import AboveFooterSection from "../Footer/AboveFooterSection";
+import Footer from "../Footer/Footer";
+import MoreOptions from "../MoreOptions/MoreOptions";
+import RelatedContainer from "../RelatedContainer/RelatedContainer";
+import ShopContainer from "../ShopContainer/ShopContainer";
+import style from "./BelowMainContent.module.css";
 
 interface PropTypes {
   match: match<{ productId: string }>;
@@ -56,8 +56,8 @@ class BelowMainContent extends React.Component<PropTypes, State> {
       this.state.addlShopProducts
     ) {
       return (
-        <div className="Main">
-          <div className="ImageGridContainer">
+        <div className={style.main}>
+          <div className={style.ImageGridContainer}>
             <ShopContainer
               products={this.state.addlShopProducts}
               shopInfo={this.state.selectedProduct.Shop}

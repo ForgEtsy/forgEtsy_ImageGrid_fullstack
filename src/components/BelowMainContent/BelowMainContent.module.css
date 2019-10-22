@@ -1,0 +1,13 @@
+.horizontalRule {
+  border-bottom: 1px solid rgb(190, 190, 190);
+  margin: 20px 0 60px 0;
+}
+
+.h1Color {
+  color: red;
+}
+
+.ImageGridContainer {
+  margin: 0 auto;
+  padding: 0 40px;
+}

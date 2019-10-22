@@ -23,9 +23,9 @@ const ShopContainer: React.FC<PropTypes> = ({
     max: highQuantity
   });
 
-  // triggers backup image is a url isnt provided
+  // triggers backup image as profile images dont work
   const imageUrl = shopInfo.icon_url_fullxfull
-    ? shopInfo.icon_url_fullxfull
+    ? faker.image.animals()
     : "http://null.com/image.jpg";
 
   return (

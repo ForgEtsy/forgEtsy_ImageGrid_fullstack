@@ -1,5 +1,5 @@
 {
-  "name": "forgetsy-imagegrid-proxy",
+  "name": "forgetsy-imagegrid-fullstack",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,11 +29,11 @@
     "typescript": "3.6.4"
   },
   "scripts": {
-    "server:dev": "nodemon server/server.js",
+    "server:dev": "npm run build && nodemon server/server.js",
     "server": "node server/server.js",
     "start:dev": "npm run lint && npm run start",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/tslint 'src/**/*.{ts,tsx}'"
