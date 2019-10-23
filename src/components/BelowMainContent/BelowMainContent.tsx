@@ -34,10 +34,12 @@ class BelowMainContent extends React.Component<PropTypes, State> {
   }
 
   public componentDidMount() {
+    window.addEventListener("click", this.updateLocation);
     this.getProducts();
   }
 
   public componentWillUnmount() {
+    window.removeEventListener("click", this.updateLocation);
     this.source.cancel("cancelled on unmount");
   }
 
@@ -78,8 +80,18 @@ class BelowMainContent extends React.Component<PropTypes, State> {
     );
   }
 
-  private async getProducts() {
-    const productId = this.props.match.params.productId;
+  private updateLocation() {
+    let productId = window.location.pathname;
+    productId = productId.replace(/\//, "");
+    if (productId !== this.props.match.params.productId) {
+      this.getProducts(productId);
+    }
+  }
+
+  private async getProducts(productIdParam?: string) {
+    const productId = productIdParam
+      ? productIdParam
+      : this.props.match.params.productId;
     try {
       const results = await axios.get(`${APIENDPOINT}/product/${productId}`, {
         cancelToken: this.source.token
