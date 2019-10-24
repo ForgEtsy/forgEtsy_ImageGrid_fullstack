@@ -31,11 +31,13 @@ class BelowMainContent extends React.Component<PropTypes, State> {
       relatedProducts: [],
       selectedProduct: null
     };
+    this.getProducts = this.getProducts.bind(this);
+    this.updateLocation = this.updateLocation.bind(this);
   }
 
   public componentDidMount() {
-    window.addEventListener("click", this.updateLocation);
     this.getProducts();
+    window.addEventListener("click", this.updateLocation);
   }
 
   public componentWillUnmount() {
