@@ -33,10 +33,12 @@ class BelowMainContent extends React.Component<PropTypes, State> {
     };
     this.getProducts = this.getProducts.bind(this);
     this.updateLocation = this.updateLocation.bind(this);
+    this.toHeader = this.toHeader.bind(this);
   }
 
   public componentDidMount() {
     this.getProducts();
+    this.toHeader();
     window.addEventListener("click", this.updateLocation);
   }
 
@@ -82,11 +84,23 @@ class BelowMainContent extends React.Component<PropTypes, State> {
     );
   }
 
-  private updateLocation() {
-    let productId = window.location.pathname;
-    productId = productId.replace(/\//, "");
-    if (productId !== this.props.match.params.productId) {
-      this.getProducts(productId);
+  private async updateLocation() {
+    try {
+      let productId = window.location.pathname;
+      productId = productId.replace(/\//, "");
+      if (productId !== this.props.match.params.productId) {
+        await this.getProducts(productId);
+        this.toHeader();
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  private toHeader() {
+    const header = document.querySelector("searchHeader");
+    if (header) {
+      header.scrollIntoView();
     }
   }
 
