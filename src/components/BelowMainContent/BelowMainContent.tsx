@@ -77,7 +77,7 @@ class BelowMainContent extends React.Component<PropTypes, State> {
     }
     return (
       <div className="ImageGridContainer">
-        <h1 className={style.h1Color}>"loading...</h1>
+        <h1>loading...</h1>
       </div>
     );
   }
