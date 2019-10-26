@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   cursor: pointer;
+  width: 207px;
 }
 
 .truncateTitle {
@@ -39,4 +40,36 @@
   padding: 1px 5px;
   border-radius: 15px;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .imageCard {
+    width: 167px;
+  }
+
+  .truncateTitle {
+    width: 164px;
+  }
+
+  .productImage {
+    width: 166px;
+    height: 144px;
+    border-radius: 2px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .imageCard {
+    width: 147px;
+  }
+
+  .truncateTitle {
+    width: 144px;
+  }
+
+  .productImage {
+    width: 146px;
+    height: 124px;
+    border-radius: 2px;
+  }
 }
