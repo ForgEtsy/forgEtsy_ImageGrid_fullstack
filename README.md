@@ -1,5 +1,7 @@
 # forgEtsy_ImageGrid_fullstack
 
+Microservice/component from etsy project page https://bit.ly/2q5vJq7
+
 ### Entry
 
 Entry is App.tsx for routing, primary entry for content is "BelowMainContent"
