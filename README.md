@@ -1,10 +1,20 @@
-# forgEtsy_ImageGrid_fullstack
+# forgEtsy ImageGrid
 
 Microservice/component from etsy project page https://bit.ly/2q5vJq7
 
+### Technologies
+Frontend: TypeScript, React, React Router & CSS Modules
+
+Backend: Node, Express, MongoDB & Mongoose
+
+Deployment: Docker, Docker-compose, AWS EC2
+
+![Image Grid Demo](https://thumbs.gfycat.com/MindlessBlankAsianconstablebutterfly-size_restricted.gif)
+
 ### Entry
 
-Entry is App.tsx for routing, primary entry for content is "BelowMainContent"
+App.tsx is the entry point for any changes to react router/initial router changes. Otherwise, actual component logic starts in `BelowMainContent`
+
 
 ### Scripts
 
