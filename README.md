@@ -1,7 +1,5 @@
 # forgEtsy ImageGrid
 
-Microservice/component from etsy project page https://bit.ly/2q5vJq7
-
 ### Technologies
 Frontend: TypeScript, React, React Router & CSS Modules
 
