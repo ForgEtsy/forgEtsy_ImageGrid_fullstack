@@ -1,4 +1,5 @@
 # forgEtsy ImageGrid
+Microservice clone of the etsy product pages related items, similar items, and footer sections. Essentionally everything on the product page below reviews. Selecting a product from the list would trigger the other components to render the new product.
 
 ### Technologies
 Frontend: TypeScript, React, React Router & CSS Modules
